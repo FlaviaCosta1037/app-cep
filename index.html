@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>App Endereços</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="img/busca.png" alt="" width="30" height="24">
+    </a>
+  </div>
+</nav>
+  <h1 class="text-center">Buscar Endereço</h1>
+  <div class="container-fluid">
+    <div id="buscar-cep" class="form-control">
+      <label for="floatingInputValue">Informe o cep</label>
+      <input class="form-control" type="text" placeholder="Ex:51160400" id="cep">
+      <button class="btn-buscar-cep" onclick="buscaCep2()">Buscar</button>
+    </div>
+    <div id="buscar-nome" class="form-control">
+    <select name="uf" id="uf">
+      <option value="PE">PE</option>
+      <option value="CE">CE</option>
+      <option value="AL">AL</option>
+      <option value="PB">PB</option>
+    </select>
+      <input class="form-control mb-3" type="text" placeholder="cidade" id="nome-cidade">
+      <input class="form-control" type="text" placeholder="Nome da rua" id="nome-rua">
+      <button class="btn-buscar-nome"onclick="buscaNome()">Buscar</button>
+    </div>
+    <!--   ação criada para chamar a função buscaCep2 no Js -->
+    <!--   formulário criado para receber os dados capturados da api buscacep -->
+    <form action="" id="formularioCep" class=".form-control-lg">
+      <!--ids criados para serem reconhecidos no arquivo js -->
+      <label for="">Rua</label>
+      <input class="form-control" type="text" id="rua" name="endereco">
+      <label for="">Bairro</label>
+      <input class="form-control" type="text" id="bairro" name="bairro">
+      <label for="">Cidade</label>
+      <input class="form-control" type="text" id="cidade" name="cidade">
+      <label for="">Estado</label>
+      <input class="form-control" type="text" id="estado" name="estado">
+    </form>
+    <ul>
+    </ul>
+    <script src="script.js"></script>
+  </div>
+
+</body>
+
+</html>
